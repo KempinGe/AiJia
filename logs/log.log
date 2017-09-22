@@ -249,3 +249,46 @@
 [W 170922 11:05:31 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.23ms
 [W 170922 11:05:31 web:2063] 404 GET /statics/images/logo@128x59.png (127.0.0.1) 1.93ms
 [W 170922 11:05:31 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 2.81ms
+[I 170922 13:58:24 web:2063] 200 GET /register.html (127.0.0.1) 120.77ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/js/jquery.min.js (127.0.0.1) 24.21ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/css/ihome/register.css (127.0.0.1) 1.19ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/css/ihome/main.css (127.0.0.1) 1.31ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/css/reset.css (127.0.0.1) 2.44ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.03ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.21ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.48ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 0.92ms
+[W 170922 13:58:24 web:2063] 404 GET /statics/images/logo@128x59.png (127.0.0.1) 0.83ms
+[I 170922 13:58:24 web:2063] 200 GET /favicon.ico (127.0.0.1) 32.78ms
+[I 170922 14:01:11 autoreload:198] /Users/lj-song/Desktop/AiJia/settings.py modified; restarting server
+[I 170922 14:01:57 web:2063] 200 GET /register.html (127.0.0.1) 26.52ms
+[I 170922 14:01:57 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 46.89ms
+[I 170922 14:01:57 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 22.66ms
+[I 170922 14:01:57 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 46.40ms
+[I 170922 14:01:57 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 26.48ms
+[E 170922 14:01:59 aijia:30] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+[I 170922 14:01:59 web:2063] 200 GET /api/VerifyCode?pre=&cur=04dddc1d-4016-44c1-b126-d1a618d4082e (127.0.0.1) 414.62ms
+[I 170922 14:02:15 web:2063] 304 GET /register.html (127.0.0.1) 1.00ms
+[E 170922 14:02:17 aijia:30] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+[I 170922 14:02:17 web:2063] 200 GET /api/VerifyCode?pre=&cur=64ad9ba1-c06d-4e36-8447-1f3bd87db3bc (127.0.0.1) 30.75ms
+[I 170922 14:02:17 web:2063] 200 GET /favicon.ico (127.0.0.1) 10.85ms
+[I 170922 14:03:08 autoreload:198] /Users/lj-song/Desktop/AiJia/server.py modified; restarting server
+[I 170922 14:03:15 web:2063] 200 GET /register.html (127.0.0.1) 42.90ms
+[I 170922 14:03:15 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 56.23ms
+[I 170922 14:03:16 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 48.73ms
+[I 170922 14:03:16 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 7.96ms
+[I 170922 14:03:16 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 1.45ms
+[I 170922 14:03:16 web:2063] 200 GET /static/js/jquery.min.js (127.0.0.1) 39.58ms
+[I 170922 14:03:16 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 23.88ms
+[I 170922 14:03:16 web:2063] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 13.13ms
+[I 170922 14:03:16 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 12.70ms
+[I 170922 14:03:16 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 26.67ms
+[I 170922 14:03:16 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 15.33ms
+[E 170922 14:03:17 aijia:30] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+[I 170922 14:03:17 web:2063] 200 GET /api/VerifyCode?pre=&cur=a2abb37c-9c36-48d7-94ef-79a02a8f6972 (127.0.0.1) 119.23ms
+[I 170922 14:03:17 web:2063] 200 GET /favicon.ico (127.0.0.1) 12.58ms
+[I 170922 14:41:43 autoreload:198] /Users/lj-song/Desktop/AiJia/urls.py modified; restarting server
+[I 170922 14:42:35 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170922 15:06:52 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170922 15:08:35 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170922 15:10:15 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server

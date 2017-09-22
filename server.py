@@ -9,7 +9,7 @@ from tornado.options import options,define
 import redis
 import torndb
 
-define("port",default=8000,type=int,help="")
+define("port",default=8008,type=int,help="")
 
 
 class AiJiaApplication(Application):

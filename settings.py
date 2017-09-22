@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 
-STATIC_PATH = os.path.join(os.path.dirname(__file__),'statics')
+STATIC_PATH = os.path.join(os.path.dirname(__file__),'static')
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__),'templates')
 LOG_LEVAL = 'debug'
 LOG_FILE = os.path.join(os.path.dirname(__file__),'logs/log.log')
@@ -10,7 +10,6 @@ app_settings = dict(
     static_path=STATIC_PATH,
     debug=True,
     xsrf_cookies = True,
-    template_path=TEMPLATE_PATH,
     cookie_secret='PQvw9USaSwWuPNrs6m6x/MsurHFz6UjGrqOXeK4GAoU=',
     login_url = '/login',#设置用户验证未通过时 跳转到的页面
 )

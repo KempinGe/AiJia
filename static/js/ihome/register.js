@@ -32,7 +32,7 @@ function sendSMSCode() {
         $("#mobile-err").show();
         $(".phonecode-a").attr("onclick", "sendSMSCode();");
         return;
-    } 
+    }
     var imageCode = $("#imagecode").val();
     if (!imageCode) {
         $("#image-code-err span").html("请填写验证码！");
@@ -104,7 +104,6 @@ function sendSMSCode() {
 }
 
 $(document).ready(function() {
-alert('asdasdasda')
     generateImageCode();
     $("#mobile").focus(function(){
         $("#mobile-err").hide();
