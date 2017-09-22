@@ -1,0 +1,251 @@
+[W 170921 16:25:41 web:1587] 400 GET /api/verifyCode (127.0.0.1): Missing argument code_id
+[W 170921 16:25:41 web:2063] 400 GET /api/verifyCode (127.0.0.1) 2.03ms
+[I 170921 16:27:01 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[E 170921 16:27:39 web:1590] Uncaught exception GET /api/verifyCode?code_id=1223 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/api/verifyCode?code_id=1223', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/Django/AiJia/aijia.py", line 26, in get
+        name,text,image = captcha.Captcha.generate_captcha()
+    TypeError: generate_captcha() missing 1 required positional argument: 'self'
+[E 170921 16:27:39 web:2063] 500 GET /api/verifyCode?code_id=1223 (127.0.0.1) 34.19ms
+[I 170921 16:28:23 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[E 170921 16:28:25 web:1590] Uncaught exception GET /api/verifyCode?code_id=1223 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/api/verifyCode?code_id=1223', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/Django/AiJia/aijia.py", line 26, in get
+        name,text,image = captcha.Captcha().generate_captcha()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 217, in generate_captcha
+        self.initialize()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 71, in initialize
+        self._text = text if text else random.sample(string.uppercase + string.uppercase + '3456789', 4)
+    AttributeError: module 'string' has no attribute 'uppercase'
+[E 170921 16:28:25 web:2063] 500 GET /api/verifyCode?code_id=1223 (127.0.0.1) 24.62ms
+[I 170921 16:29:50 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py modified; restarting server
+[E 170921 16:29:51 web:1590] Uncaught exception GET /api/verifyCode?code_id=1223 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/api/verifyCode?code_id=1223', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/Django/AiJia/aijia.py", line 26, in get
+        name,text,image = captcha.Captcha().generate_captcha()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 217, in generate_captcha
+        self.initialize()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 71, in initialize
+        self._text = text if text else random.sample(string.uppercase + string.uppercase + '3456789', 4)
+    AttributeError: module 'string' has no attribute 'uppercase'
+[E 170921 16:29:51 web:2063] 500 GET /api/verifyCode?code_id=1223 (127.0.0.1) 7.31ms
+[E 170921 16:30:06 web:1590] Uncaught exception GET /api/verifyCode?code_id=1223 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/api/verifyCode?code_id=1223', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/Django/AiJia/aijia.py", line 26, in get
+        name,text,image = captcha.Captcha().generate_captcha()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 217, in generate_captcha
+        self.initialize()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 71, in initialize
+        self._text = text if text else random.sample(string.uppercase + string.uppercase + '3456789', 4)
+    AttributeError: module 'string' has no attribute 'uppercase'
+[E 170921 16:30:06 web:2063] 500 GET /api/verifyCode?code_id=1223 (127.0.0.1) 33.99ms
+[I 170921 16:30:56 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py modified; restarting server
+[E 170921 16:30:59 web:1590] Uncaught exception GET /api/verifyCode?code_id=1223 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/api/verifyCode?code_id=1223', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/PIL/ImageFile.py", line 464, in _save
+        fh = fp.fileno()
+    io.UnsupportedOperation: fileno
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/Django/AiJia/aijia.py", line 26, in get
+        name,text,image = captcha.Captcha().generate_captcha()
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 218, in generate_captcha
+        return self.captcha("")
+      File "/Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py", line 211, in captcha
+        image.save(out, format=fmt)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/PIL/Image.py", line 1893, in save
+        save_handler(self, fp, filename)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/PIL/JpegImagePlugin.py", line 739, in _save
+        ImageFile._save(im, fp, [("jpeg", (0, 0)+im.size, 0, rawmode)], bufsize)
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/PIL/ImageFile.py", line 479, in _save
+        fp.write(d)
+    TypeError: string argument expected, got 'bytes'
+[E 170921 16:30:59 web:2063] 500 GET /api/verifyCode?code_id=1223 (127.0.0.1) 274.61ms
+[I 170921 16:36:40 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/utils/captcha/captcha.py modified; restarting server
+[I 170921 16:36:43 web:2063] 200 GET /api/verifyCode?code_id=1223 (127.0.0.1) 166.13ms
+[I 170921 16:38:14 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 16:39:53 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 16:39:56 web:2063] 200 GET /api/verifyCode?code_id=1223 (127.0.0.1) 139.57ms
+[I 170921 16:41:29 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 16:41:33 web:2063] 200 GET /api/verifyCode?code_id=1223 (127.0.0.1) 85.77ms
+[I 170921 16:56:23 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/urls.py modified; restarting server
+[I 170921 17:00:34 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/urls.py modified; restarting server
+[W 170921 17:00:38 web:2063] 404 GET /home (127.0.0.1) 67.42ms
+[I 170921 17:01:09 web:2063] 304 GET / (127.0.0.1) 0.97ms
+[I 170921 17:01:20 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/urls.py modified; restarting server
+[I 170921 17:01:27 web:2063] 200 GET / (127.0.0.1) 52.37ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 19.11ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/swiper/css/swiper.min.css (127.0.0.1) 8.89ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css (127.0.0.1) 21.25ms
+[I 170921 17:01:27 web:2063] 200 GET /static/css/ihome/main.css (127.0.0.1) 25.86ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 24.41ms
+[I 170921 17:01:27 web:2063] 200 GET /static/css/ihome/index.css (127.0.0.1) 9.27ms
+[I 170921 17:01:27 web:2063] 200 GET /static/css/reset.css (127.0.0.1) 27.88ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/swiper/js/swiper.jquery.min.js (127.0.0.1) 31.54ms
+[I 170921 17:01:27 web:2063] 200 GET /static/js/template.js (127.0.0.1) 48.88ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js (127.0.0.1) 34.13ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js (127.0.0.1) 6.16ms
+[I 170921 17:01:27 web:2063] 200 GET /static/js/ihome/index.js (127.0.0.1) 13.45ms
+[I 170921 17:01:27 web:2063] 200 GET /static/images/logo@128x59.png (127.0.0.1) 2.09ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 16.11ms
+[I 170921 17:01:27 web:2063] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 101.76ms
+[W 170921 17:01:27 web:2063] 404 GET /api/house/index (127.0.0.1) 68.16ms
+[W 170921 17:01:27 web:2063] 404 GET /api/check_login (127.0.0.1) 1.35ms
+[W 170921 17:01:28 web:2063] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 39.95ms
+[I 170921 17:03:24 web:2063] 200 GET / (127.0.0.1) 2.65ms
+[W 170921 17:03:24 web:2063] 404 GET /plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.58ms
+[W 170921 17:03:24 web:2063] 404 GET /plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.63ms
+[W 170921 17:03:24 web:2063] 404 GET /plugins/swiper/css/swiper.min.css (127.0.0.1) 2.07ms
+[W 170921 17:03:24 web:2063] 404 GET /css/reset.css (127.0.0.1) 2.53ms
+[W 170921 17:03:24 web:2063] 404 GET /css/ihome/main.css (127.0.0.1) 1.68ms
+[W 170921 17:03:24 web:2063] 404 GET /plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css (127.0.0.1) 1.45ms
+[W 170921 17:03:24 web:2063] 404 GET /css/ihome/index.css (127.0.0.1) 1.31ms
+[W 170921 17:03:24 web:2063] 404 GET /api/check_login (127.0.0.1) 1.83ms
+[W 170921 17:03:24 web:2063] 404 GET /api/house/index (127.0.0.1) 2.07ms
+[W 170921 17:03:24 web:2063] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.72ms
+[I 170921 17:04:39 web:2063] 200 GET / (127.0.0.1) 2.34ms
+[W 170921 17:04:40 web:2063] 404 GET /api/check_login (127.0.0.1) 2.20ms
+[W 170921 17:04:40 web:2063] 404 GET /api/house/index (127.0.0.1) 1.65ms
+[W 170921 17:04:40 web:2063] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 2.69ms
+[W 170921 17:05:31 web:2063] 404 GET /register (127.0.0.1) 1.80ms
+[I 170921 17:05:55 web:2063] 200 GET /register.html (127.0.0.1) 11.82ms
+[I 170921 17:05:55 web:2063] 200 GET /static/css/ihome/register.css (127.0.0.1) 43.12ms
+[I 170921 17:05:56 web:2063] 200 GET /static/js/ihome/register.js (127.0.0.1) 12.89ms
+[W 170921 17:05:56 web:2063] 404 GET /api/piccode?pre=&cur=e14576ee-0809-414e-ac3d-a5bce7871b1f (127.0.0.1) 1.78ms
+[I 170921 17:06:54 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/urls.py modified; restarting server
+[W 170921 17:06:59 web:2063] 404 GET /register (127.0.0.1) 44.92ms
+[I 170921 17:08:37 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/urls.py modified; restarting server
+[W 170921 17:08:41 web:2063] 404 GET /api/piccode?pre=&cur=458c7823-f0fa-4a7f-b5f2-4f85a3cdc511 (127.0.0.1) 4.58ms
+[I 170921 17:19:08 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 17:19:11 web:2063] 304 GET /register.html (127.0.0.1) 59.59ms
+[W 170921 17:19:12 web:2063] 404 GET /api/piccode?pre=&cur=91b576c2-6f5b-42c4-afa7-c194c3b89334 (127.0.0.1) 49.99ms
+[W 170921 17:19:13 web:2063] 404 GET /api/piccode?pre=91b576c2-6f5b-42c4-afa7-c194c3b89334&cur=51da8cfb-2152-4e8f-ac0f-45c08cf0fd23 (127.0.0.1) 1.99ms
+[I 170921 17:25:27 web:2063] 304 GET /register.html (127.0.0.1) 13.73ms
+[W 170921 17:25:27 web:2063] 404 GET /api/piccode?pre=&cur=aaf74695-24cd-4599-8c21-106c28c95f12 (127.0.0.1) 4.59ms
+[W 170921 17:25:41 web:2063] 404 GET /api/piccode?pre=aaf74695-24cd-4599-8c21-106c28c95f12&cur=7b505a08-3957-47d1-bdc9-aab1a2fe6983 (127.0.0.1) 2.17ms
+[I 170921 17:26:28 web:2063] 304 GET /register.html (127.0.0.1) 10.40ms
+[W 170921 17:26:28 web:2063] 404 GET /api/piccode?pre=&cur=1f6af351-748b-40f0-9d49-f4dccd815f3c (127.0.0.1) 4.85ms
+[I 170921 17:26:38 web:2063] 304 GET /register.html (127.0.0.1) 8.15ms
+[W 170921 17:26:38 web:2063] 404 GET /api/piccode?pre=&cur=93f420c2-4436-4c82-a89e-9825deed55fc (127.0.0.1) 4.69ms
+[W 170921 17:26:47 web:2063] 404 GET /api/piccode?pre=93f420c2-4436-4c82-a89e-9825deed55fc&cur=b91dadac-6fd9-4cbb-8799-7e10954160aa (127.0.0.1) 1.66ms
+[I 170921 17:28:16 web:2063] 304 GET /register.html (127.0.0.1) 13.71ms
+[W 170921 17:28:17 web:2063] 404 GET /api/piccode?pre=&cur=5689a043-3760-45ab-9da6-fd81172d2364 (127.0.0.1) 8.07ms
+[I 170921 17:29:25 web:2063] 304 GET /register.html (127.0.0.1) 1.75ms
+[W 170921 17:29:25 web:2063] 404 GET /api/piccode?pre=&cur=e7d4d132-9501-4d40-a872-337f4cc37629 (127.0.0.1) 1.78ms
+[I 170921 17:29:34 web:2063] 304 GET /register.html (127.0.0.1) 16.71ms
+[W 170921 17:29:34 web:2063] 404 GET /api/piccode?pre=&cur=f752e23c-d4ac-4cb0-9966-6bece57b47a2 (127.0.0.1) 6.49ms
+[W 170921 17:30:17 web:2063] 404 GET /api/piccode?pre=f752e23c-d4ac-4cb0-9966-6bece57b47a2&cur=b2db546c-f509-422c-96f4-ce2d59c71b3c (127.0.0.1) 1.64ms
+[W 170921 17:31:00 web:2063] 404 GET /api/piccode?pre=&cur=071e98f4-814d-4b15-aebe-63423d12a395 (127.0.0.1) 9.26ms
+[W 170921 17:31:10 web:2063] 404 GET /api/piccode?pre=071e98f4-814d-4b15-aebe-63423d12a395&cur=9a4df48b-d15c-4a5e-a64a-79316689526a (127.0.0.1) 1.40ms
+[I 170921 17:38:27 web:2063] 304 GET /register.html (127.0.0.1) 9.59ms
+[W 170921 17:38:27 web:2063] 404 GET /api/piccode?pre=&cur=d2affb12-e6fe-4400-88dd-79f3321d5e9a (127.0.0.1) 3.73ms
+[I 170921 17:44:34 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 17:44:37 web:2063] 304 GET /register.html (127.0.0.1) 52.90ms
+[W 170921 17:44:37 web:2063] 404 GET /api/piccode?pre=&cur=c1e8a0ee-4bdd-43d9-9b3a-ea6b1c84823a (127.0.0.1) 22.71ms
+[I 170921 17:45:12 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/aijia.py modified; restarting server
+[I 170921 17:47:50 web:2063] 304 GET /register.html (127.0.0.1) 33.24ms
+[W 170921 17:47:50 web:2063] 404 GET /api/piccode?pre=&cur=8b049e49-27bf-4831-ab5f-e3dc32b9d1f2 (127.0.0.1) 228.93ms
+[I 170921 17:49:57 web:2063] 304 GET /register.html (127.0.0.1) 38.30ms
+[W 170921 17:49:57 web:2063] 404 GET /api/piccode?pre=&cur=cafd1aba-4972-4836-948c-0dfdfcd5cb88 (127.0.0.1) 27.52ms
+[I 170921 17:51:35 web:2063] 304 GET /register.html (127.0.0.1) 0.94ms
+[W 170921 17:51:35 web:2063] 404 GET /api/piccode?pre=&cur=1be8461e-868d-4edc-a15e-a0043f3a6adc (127.0.0.1) 1.82ms
+[I 170921 17:51:37 web:2063] 304 GET /register.html (127.0.0.1) 1.59ms
+[W 170921 17:51:37 web:2063] 404 GET /api/piccode?pre=&cur=4bbfecb6-3fef-40f1-9f11-33385ba04bda (127.0.0.1) 1.45ms
+[W 170921 17:51:41 web:2063] 404 GET /api/piccode?pre=4bbfecb6-3fef-40f1-9f11-33385ba04bda&cur=612af324-babf-4c3c-b3a4-d4c48ca2a521 (127.0.0.1) 0.98ms
+[I 170921 17:53:04 web:2063] 304 GET /register.html (127.0.0.1) 52.12ms
+[W 170921 17:53:04 web:2063] 404 GET /api/piccode?pre=&cur=7818a5cf-c0eb-4280-a690-824836e80f42 (127.0.0.1) 26.92ms
+[W 170921 17:53:06 web:2063] 404 GET /api/piccode?pre=7818a5cf-c0eb-4280-a690-824836e80f42&cur=484ee1fd-561c-4074-a432-528d31961579 (127.0.0.1) 1.43ms
+[W 170921 17:53:43 web:2063] 404 GET /api/piccode?pre=&cur=074745b9-85ad-4a1d-81d4-942668827c82 (127.0.0.1) 27.62ms
+[W 170921 17:53:48 web:2063] 404 GET /api/piccode?pre=074745b9-85ad-4a1d-81d4-942668827c82&cur=3833f939-daef-41e8-938d-74a80ca4d39c (127.0.0.1) 1.70ms
+[I 170921 17:56:03 web:2063] 200 GET /api/verifyCode?pre=074745b9-85ad-4a1d-81d4-942668827c82&cur=3833f939-daef-41e8-938d-74a80ca4d39c (127.0.0.1) 109.86ms
+[I 170921 17:57:44 web:2063] 200 GET /api/verifyCode?pre=074745b9-85ad-4a1d-81d4-942668827c82&cur=3833f939-daef-41e8-938d-74a80ca4d39c (127.0.0.1) 92.60ms
+[W 170921 17:57:50 web:2063] 404 GET /api/piccode?pre=&cur=7ae4c562-2ee8-43d9-945b-7c91dc56565a (127.0.0.1) 1.43ms
+[I 170921 17:57:55 web:2063] 200 GET /login.html (127.0.0.1) 51.42ms
+[I 170921 17:57:55 web:2063] 200 GET /static/css/ihome/login.css (127.0.0.1) 13.06ms
+[I 170921 17:57:55 web:2063] 200 GET /static/js/ihome/login.js (127.0.0.1) 45.99ms
+[W 170921 17:57:56 web:2063] 404 GET /api/piccode?pre=&cur=06aed0f4-12ac-49b4-87fc-c20f795e7efd (127.0.0.1) 1.39ms
+[W 170921 17:58:08 web:2063] 404 GET /api/piccode?pre=06aed0f4-12ac-49b4-87fc-c20f795e7efd&cur=7295453d-3d03-4b2e-a768-1bed4d6e161f (127.0.0.1) 1.45ms
+[W 170921 17:58:10 web:2063] 404 GET /api/piccode?pre=7295453d-3d03-4b2e-a768-1bed4d6e161f&cur=638a3133-0a60-454c-81be-bd4c36d6506f (127.0.0.1) 0.76ms
+[W 170921 17:58:10 web:2063] 404 GET /api/piccode?pre=638a3133-0a60-454c-81be-bd4c36d6506f&cur=a01bca42-8d29-44ab-92ed-8fe69802cf42 (127.0.0.1) 1.44ms
+[W 170921 17:58:10 web:2063] 404 GET /api/piccode?pre=a01bca42-8d29-44ab-92ed-8fe69802cf42&cur=58752baa-f7a4-4c55-9c8e-44da38323745 (127.0.0.1) 1.13ms
+[W 170921 17:58:10 web:2063] 404 GET /api/piccode?pre=58752baa-f7a4-4c55-9c8e-44da38323745&cur=a5542d20-9503-464d-a327-70ad272a448a (127.0.0.1) 1.42ms
+[I 170921 18:00:23 web:2063] 304 GET /register.html (127.0.0.1) 141.07ms
+[I 170921 18:00:23 web:2063] 200 GET /api/piccode?pre=&cur=5e44fbb1-f47f-4a6a-bdc4-f8cd9b573bf7 (127.0.0.1) 229.44ms
+[I 170921 18:00:30 web:2063] 200 GET /api/piccode?pre=5e44fbb1-f47f-4a6a-bdc4-f8cd9b573bf7&cur=0122c4b0-63db-4d5d-a7e1-fffe49681020 (127.0.0.1) 13.55ms
+[I 170921 18:03:25 web:2063] 304 GET /register.html (127.0.0.1) 1.28ms
+[I 170921 18:03:25 web:2063] 200 GET /api/piccode?pre=&cur=fd8beada-4d3d-458a-a3c4-2110c7d22723 (127.0.0.1) 14.31ms
+[I 170921 18:05:30 web:2063] 200 GET /api/piccode?pre=&cur=d2dc6670-6c24-4ccb-9d52-e6d6e0086522 (127.0.0.1) 41.31ms
+[I 170921 18:06:05 web:2063] 304 GET /register.html (127.0.0.1) 15.61ms
+[I 170921 18:06:05 web:2063] 200 GET /api/piccode?pre=&cur=5e8607e8-8570-4f94-8ea4-40e73abf3595 (127.0.0.1) 29.65ms
+[I 170921 18:07:41 web:2063] 200 GET /api/piccode?pre=&cur=488bf597-4066-494f-b247-e5a42f702ee3 (127.0.0.1) 578.29ms
+[I 170921 18:08:23 web:2063] 304 GET /register.html (127.0.0.1) 36.59ms
+[I 170921 18:08:23 web:2063] 200 GET /api/piccode?pre=&cur=de0d0350-306d-4966-bc03-d28592dce436 (127.0.0.1) 34.35ms
+[I 170921 18:08:24 web:2063] 304 GET /register.html (127.0.0.1) 1.35ms
+[I 170921 18:08:24 web:2063] 200 GET /api/piccode?pre=&cur=5a374052-1585-4b72-8958-dd9433976930 (127.0.0.1) 39.83ms
+[I 170921 18:08:26 web:2063] 304 GET /register.html (127.0.0.1) 0.78ms
+[I 170921 18:08:26 web:2063] 200 GET /api/piccode?pre=&cur=a0e29428-a336-4d4d-ab5d-593e8abaa8fe (127.0.0.1) 33.12ms
+[I 170921 18:11:09 web:2063] 304 GET / (127.0.0.1) 11.94ms
+[W 170921 18:11:10 web:2063] 404 GET /api/check_login (127.0.0.1) 22.99ms
+[W 170921 18:11:10 web:2063] 404 GET /api/house/index (127.0.0.1) 1.28ms
+[I 170921 18:11:14 web:2063] 200 GET /api/piccode?pre=&cur=d863b170-1228-4af5-94df-2219188bc5c3 (127.0.0.1) 31.02ms
+[E 170922 09:10:20 aijia:30] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+[I 170922 09:10:20 web:2063] 200 GET /api/piccode?pre=&cur=c0f65ebe-4b93-4af6-8afc-9139f84b61e4 (127.0.0.1) 361.83ms
+[I 170922 09:10:20 web:2063] 200 GET /favicon.ico (127.0.0.1) 98.33ms
+[W 170922 10:51:51 web:2063] 404 GET /VerifyCode (127.0.0.1) 425.94ms
+[W 170922 10:52:00 web:2063] 404 GET /api/piccode?pre=&cur=48695e5b-ca99-4cbf-ad34-8bdb5f01c7b9 (127.0.0.1) 0.88ms
+[W 170922 10:52:10 web:2063] 404 GET /api/piccode?pre=48695e5b-ca99-4cbf-ad34-8bdb5f01c7b9&cur=1b240e68-af57-4003-af7c-4b2501f58eab (127.0.0.1) 1.39ms
+[I 170922 10:56:41 web:2063] 304 GET /register.html (127.0.0.1) 201.57ms
+[W 170922 10:56:41 web:2063] 404 GET /api/piccode?pre=&cur=239bbc77-2cae-4f89-a9bb-680b99e4185b (127.0.0.1) 1.64ms
+[I 170922 10:57:51 web:2063] 304 GET /register.html (127.0.0.1) 36.98ms
+[W 170922 10:57:51 web:2063] 404 GET /api/piccode?pre=&cur=c23d8d2f-1e7b-40b1-a99a-e2f45236e7ab (127.0.0.1) 163.86ms
+[I 170922 10:58:56 autoreload:198] /Users/lj-song/Desktop/Django/AiJia/settings.py modified; restarting server
+[I 170922 11:02:57 web:2063] 200 GET /register.html (127.0.0.1) 100.74ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 222.94ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/css/reset.css (127.0.0.1) 1.17ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/css/ihome/main.css (127.0.0.1) 0.79ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/css/ihome/register.css (127.0.0.1) 0.75ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/js/jquery.min.js (127.0.0.1) 0.79ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 0.79ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/images/logo@128x59.png (127.0.0.1) 1.71ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 4.10ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.41ms
+[W 170922 11:02:58 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 1.23ms
+[I 170922 11:05:29 web:2063] 304 GET /register.html (127.0.0.1) 0.85ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.42ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/js/jquery.min.js (127.0.0.1) 1.27ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/css/ihome/register.css (127.0.0.1) 1.28ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/css/ihome/main.css (127.0.0.1) 1.34ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/css/reset.css (127.0.0.1) 1.60ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 2.70ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/images/logo@128x59.png (127.0.0.1) 1.33ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 1.45ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.65ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.68ms
+[W 170922 11:05:29 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 3.41ms
+[I 170922 11:05:31 web:2063] 304 GET /register.html (127.0.0.1) 0.86ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 1.41ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.41ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/css/ihome/register.css (127.0.0.1) 2.48ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/css/ihome/main.css (127.0.0.1) 2.36ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/css/reset.css (127.0.0.1) 1.00ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/js/jquery.min.js (127.0.0.1) 0.79ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 1.23ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/images/logo@128x59.png (127.0.0.1) 1.93ms
+[W 170922 11:05:31 web:2063] 404 GET /statics/js/ihome/register.js (127.0.0.1) 2.81ms
