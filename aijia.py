@@ -1,10 +1,11 @@
-# -*- coding: utf-8 -*-
+
 import logging
 import cons
 from utils.response_code import RET
 from Base.BaseHandle import BaseHandle
 from utils.captcha import captcha
 import random
+import json
 
 #tail -f log 命令实时查看log日志
 class IndexHandle(BaseHandle):
@@ -14,6 +15,7 @@ class IndexHandle(BaseHandle):
 
 class VerifyCodeImageHandle(BaseHandle):
     def get(self, *args, **kwargs):
+        self.xsrf_token
         code_id = self.get_argument('cur','')
         pre_code_id = self.get_argument('pre','')
         if pre_code_id:
@@ -27,8 +29,9 @@ class VerifyCodeImageHandle(BaseHandle):
         # image 验证码图片的二进制文件
         name,text,image = captcha.Captcha().generate_captcha()
         try:
-            self.redis.setex('image_code_%s' % code_id,cons.IMAGE_CODE_EXPIERES_SECONDS,text)
+            self.redis.setex(name='image_code_%s' % code_id,time=cons.IMAGE_CODE_EXPIERES_SECONDS,value=text)
         except Exception as e:
+            print('存储失败')
             logging.error(e)
             self.write('')
         self.set_header('Content-Type','image/jpg')
@@ -43,11 +46,12 @@ class PhoneCodeHandle(BaseHandle):
         pass
     def post(self, *args, **kwargs):
         #piccode:imageCode, piccode_id
-        mobile = self.get_argument('mobile')
-        image_code_id = self.get_argument('piccode_id')
-        image_code_text = self.get_argument('piccode')
-
-        if all((mobile,image_code_id,image_code_text,)):
+        data_dic = json.loads(self.request.body)
+        mobile = data_dic['mobile']
+        image_code_id = data_dic['piccode_id']
+        image_code_text = data_dic['piccode']
+        print(mobile,image_code_id,image_code_text)
+        if not all((mobile,image_code_id,image_code_text)):
             return self.write(dict(error=RET.PARAMERR,errmsg='参数错误'))
 
         try:
@@ -60,7 +64,7 @@ class PhoneCodeHandle(BaseHandle):
         if not real_image_code_text:
             return self.write(dict(error=RET.NODATA,errmsg='验证码过期.请点击刷新'))
 
-        if real_image_code_text.lower() != image_code_text.lower():
+        if real_image_code_text.decode('ascii').lower() != image_code_text.lower():
             return self.write(dict(errro=RET.DATAERR,errmsg="验证码输入错误"))
 
         sms_code = '%4d' % random.randint(0,999999)

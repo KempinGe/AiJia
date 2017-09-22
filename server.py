@@ -31,7 +31,10 @@ class AiJiaApplication(Application):
         #     host = settings.REDIS_SETTINGS['host'],
         #     port = settings.REDIS_SETTINGS['port'],
         # )
-        self.redis = redis.StrictRedis(**(settings.REDIS_SETTINGS))
+        try:
+            self.redis = redis.StrictRedis(**(settings.REDIS_SETTINGS))
+        except Exception as e:
+            print(e)
 
 
 
