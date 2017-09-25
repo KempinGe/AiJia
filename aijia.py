@@ -6,6 +6,7 @@ from Base.BaseHandle import BaseHandle
 from utils.captcha import captcha
 import random
 import json
+from utils.conmon import require_logined
 
 #tail -f log 命令实时查看log日志
 class IndexHandle(BaseHandle):
@@ -14,8 +15,9 @@ class IndexHandle(BaseHandle):
 
 
 class VerifyCodeImageHandle(BaseHandle):
+    @require_logined
     def get(self, *args, **kwargs):
-        self.xsrf_token
+        #self.xsrf_token
         code_id = self.get_argument('cur','')
         pre_code_id = self.get_argument('pre','')
         if pre_code_id:
@@ -41,9 +43,10 @@ class VerifyCodeImageHandle(BaseHandle):
 
 class PhoneCodeHandle(BaseHandle):
     """手机验证码"""
-    def prepare(self):
-        #因为有post传参数 传的是Json数据 所以要解包
-        pass
+    # def prepare(self):
+    #     #因为有post传参数 传的是Json数据 所以要解包
+    #     pass
+    @require_logined
     def post(self, *args, **kwargs):
         #piccode:imageCode, piccode_id
         data_dic = json.loads(self.request.body)
@@ -80,5 +83,8 @@ class PhoneCodeHandle(BaseHandle):
 
 
 
+class Register_Handle(BaseHandle):
+    def post(self, *args, **kwargs):
+        pass
 
 

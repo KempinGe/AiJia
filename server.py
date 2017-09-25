@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from playhouse.pool import PooledMySQLDatabase
+# from playhouse.pool import PooledMySQLDatabase
 from urls import urls
 import settings
 from tornado import ioloop ,httpserver,options

@@ -49,3 +49,66 @@
 [I 170922 17:19:44 web:2063] 200 GET /api/VerifyCode?pre=9a8d99aa-7028-47c9-97d2-10f742905f82&cur=a7df1f0b-c4be-4687-95cd-a8528426e073 (127.0.0.1) 111.88ms
 [I 170922 17:20:28 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
 [I 170922 17:20:37 web:2063] 200 POST /api/PhoneCode (127.0.0.1) 32.30ms
+[I 170925 11:51:21 web:2063] 304 GET /register.html (127.0.0.1) 17.69ms
+[I 170925 11:51:21 web:2063] 304 GET /static/js/ihome/register.js (127.0.0.1) 33.85ms
+[E 170925 11:51:21 web:1590] Uncaught exception GET /api/VerifyCode?pre=&cur=e92086bc-e624-4901-9cc7-e5f246e75400 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/api/VerifyCode?pre=&cur=e92086bc-e624-4901-9cc7-e5f246e75400', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8', 'Referer': 'http://127.0.0.1:8008/register.html', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/AiJia/aijia.py", line 18, in get
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 32, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170925 11:51:21 web:2063] 500 GET /api/VerifyCode?pre=&cur=e92086bc-e624-4901-9cc7-e5f246e75400 (127.0.0.1) 79.87ms
+[E 170925 11:51:29 web:1590] Uncaught exception GET /api/VerifyCode?pre=e92086bc-e624-4901-9cc7-e5f246e75400&cur=44208120-220a-4946-906a-46e85299e956 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/api/VerifyCode?pre=e92086bc-e624-4901-9cc7-e5f246e75400&cur=44208120-220a-4946-906a-46e85299e956', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8', 'Referer': 'http://127.0.0.1:8008/register.html', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/AiJia/aijia.py", line 18, in get
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 32, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170925 11:51:29 web:2063] 500 GET /api/VerifyCode?pre=e92086bc-e624-4901-9cc7-e5f246e75400&cur=44208120-220a-4946-906a-46e85299e956 (127.0.0.1) 0.99ms
+[I 170925 11:52:13 web:2063] 304 GET /register.html (127.0.0.1) 1.61ms
+[E 170925 11:52:13 web:1590] Uncaught exception GET /api/VerifyCode?pre=&cur=1368fa46-78e0-42b8-8b81-86d5f1a649e4 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/api/VerifyCode?pre=&cur=1368fa46-78e0-42b8-8b81-86d5f1a649e4', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36', 'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8', 'Referer': 'http://127.0.0.1:8008/register.html', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/Users/lj-song/Desktop/AiJia/aijia.py", line 18, in get
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 32, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170925 11:52:13 web:2063] 500 GET /api/VerifyCode?pre=&cur=1368fa46-78e0-42b8-8b81-86d5f1a649e4 (127.0.0.1) 1.74ms
+[I 170925 11:53:37 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170925 11:53:39 web:2063] 304 GET /register.html (127.0.0.1) 10.04ms
+[I 170925 11:53:40 web:2063] 200 GET /api/VerifyCode?pre=&cur=419b26da-336e-49c4-aef0-467b4c367c20 (127.0.0.1) 219.41ms
+[I 170925 11:54:28 web:2063] 304 GET /register.html (127.0.0.1) 0.90ms
+[I 170925 11:54:28 web:2063] 200 GET /api/VerifyCode?pre=&cur=12ad8df5-b31b-4380-9dd6-7ffdfbb1f8b9 (127.0.0.1) 11.80ms
+[I 170925 11:55:33 web:2063] 200 GET /api/VerifyCode?pre=12ad8df5-b31b-4380-9dd6-7ffdfbb1f8b9&cur=c466fc1b-9dd5-4dff-9f31-171f59b8003a (127.0.0.1) 13.99ms
+[I 170925 14:20:33 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170925 14:20:54 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
+[I 170925 16:53:00 autoreload:198] /Users/lj-song/Desktop/AiJia/cons.py modified; restarting server

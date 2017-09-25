@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from tornado.web import RequestHandler
+from utils.sessionHandle import GKBSession
 class BaseHandle(RequestHandler):
+
 
     @property
     def db(self):
@@ -12,7 +14,8 @@ class BaseHandle(RequestHandler):
         return self.application.redis
 
     def prepare(self):
-        pass
+        self.xsrf_token
+
     def get(self, *args, **kwargs):
         pass
     def post(self, *args, **kwargs):
@@ -25,3 +28,7 @@ class BaseHandle(RequestHandler):
         pass
     def on_finish(self):
         pass
+
+    def get_current_user(self):
+        self.session = GKBSession(self)
+        return self.session.data
