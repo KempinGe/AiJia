@@ -112,3 +112,132 @@
 [I 170925 14:20:33 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
 [I 170925 14:20:54 autoreload:198] /Users/lj-song/Desktop/AiJia/aijia.py modified; restarting server
 [I 170925 16:53:00 autoreload:198] /Users/lj-song/Desktop/AiJia/cons.py modified; restarting server
+[I 170927 14:36:09 autoreload:198] /Users/lj-song/Desktop/AiJia/urls.py modified; restarting server
+[E 170927 14:36:18 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Upgrade-Insecure-Requests': '1', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:18 web:2063] 500 GET / (127.0.0.1) 20.67ms
+[E 170927 14:36:20 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:20 web:2063] 500 GET / (127.0.0.1) 1.94ms
+[E 170927 14:36:32 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Upgrade-Insecure-Requests': '1', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:32 web:2063] 500 GET / (127.0.0.1) 3.79ms
+[E 170927 14:36:34 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:34 web:2063] 500 GET / (127.0.0.1) 1.31ms
+[E 170927 14:36:36 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:36 web:2063] 500 GET / (127.0.0.1) 1.53ms
+[E 170927 14:36:36 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:36 web:2063] 500 GET / (127.0.0.1) 1.24ms
+[E 170927 14:36:36 web:1590] Uncaught exception GET / (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8008', method='GET', uri='/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8008', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Cookie': 'csrftoken=css8TGZlq5p25pUF8kDOet1VwoD8TYmvW8oQMcINb6uqtoqoOVxxTO0kPqwK14nS'})
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 17, in prepare
+        self.xsrf_token
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1232, in xsrf_token
+        expires_days = 30 if self.current_user else None
+      File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado/web.py", line 1157, in current_user
+        self._current_user = self.get_current_user()
+      File "/Users/lj-song/Desktop/AiJia/Base/BaseHandle.py", line 33, in get_current_user
+        self.session = GKBSession(self)
+      File "/Users/lj-song/Desktop/AiJia/utils/sessionHandle.py", line 13, in __init__
+        self.session_id = uuid.uuid4().get_gex()
+    AttributeError: 'UUID' object has no attribute 'get_gex'
+[E 170927 14:36:36 web:2063] 500 GET / (127.0.0.1) 1.38ms
+[I 170927 14:37:26 autoreload:198] /Users/lj-song/Desktop/AiJia/Base/BaseHandle.py modified; restarting server
+[I 170927 14:38:38 web:2063] 200 GET / (127.0.0.1) 1.14ms
+[I 170927 14:39:05 web:2063] 200 GET / (127.0.0.1) 0.71ms
+[I 170927 14:39:41 web:2063] 200 GET / (127.0.0.1) 1.73ms
+[I 170927 14:39:41 web:2063] 200 GET /favicon.ico (127.0.0.1) 91.86ms
+[I 170927 14:39:45 web:2063] 200 GET / (127.0.0.1) 0.76ms
+[I 170927 14:40:27 web:2063] 304 GET / (127.0.0.1) 1.40ms
+[I 170927 14:40:27 web:2063] 200 GET /favicon.ico (127.0.0.1) 12.11ms
+[I 170927 14:40:30 web:2063] 200 GET / (127.0.0.1) 0.59ms

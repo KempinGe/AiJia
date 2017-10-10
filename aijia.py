@@ -10,8 +10,13 @@ from utils.conmon import require_logined
 
 #tail -f log 命令实时查看log日志
 class IndexHandle(BaseHandle):
+    def prepare(self):
+        pass
+    def get_current_user(self):
+        pass
+
     def get(self, *args, **kwargs):
-        self.write('hello tornado')
+        return  self.write({'title': 'text','data':"hello word"})
 
 
 class VerifyCodeImageHandle(BaseHandle):
@@ -70,7 +75,7 @@ class PhoneCodeHandle(BaseHandle):
         if real_image_code_text.decode('ascii').lower() != image_code_text.lower():
             return self.write(dict(errro=RET.DATAERR,errmsg="验证码输入错误"))
 
-        sms_code = '%4d' % random.randint(0,999999)
+        sms_code = '%6d' % random.randint(0,999999)
         print(sms_code)
         # 用第三方短信服务发送到客户端手机....
 
